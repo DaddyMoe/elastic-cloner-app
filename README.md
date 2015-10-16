@@ -1,4 +1,5 @@
-# Elastic Cloner App  [A Spring Boot Application]
+# Elastic Cloner App  
+[A Spring Boot Application]
 
 
 ### To Build and Run the application, execute: 
