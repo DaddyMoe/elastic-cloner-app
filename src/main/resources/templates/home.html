@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Elastic Cloner App</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
+</head>
+
+<body class="body-override">
+<div class="form-details-entry">
+    <div class="top-header">
+        <h1>Elastic Cloner App</h1>
+        <h6>Manage your indices repetitively with ease</h6>
+        <br/>
+    </div>
+
+    <form class="index-cloner-form" method="POST">
+
+        <div th:if="${cloneProperties.errorMessage != null}" class="alert-box-red">
+            <span th:text="${cloneProperties.errorMessage}"></span>
+        </div>
+
+        <div th:if="${cloneProperties.successMessage != null}" class="alert-box-green">
+            <span th:text="${cloneProperties.successMessage}"></span>
+        </div>
+
+        <div class="blue-zone">
+            <h4> Source Details</h4>
+
+            <label for="srcIndexName" class="sr-only">Index Name:</label>
+            <input type="text" class="form-control" placeholder="Index Name" name="srcIndexName"/><br/>
+
+            <label for="srcHostName" class="sr-only">Hostname</label>
+            <input type="text" class="form-control" placeholder="Hostname" name="srcHostName"/><br/>
+
+            <label for="srcHostUserName" class="sr-only">Host Username</label>
+            <input type="text" class="form-control" placeholder="Host Username" name="srcHostUserName"/><br/>
+
+            <label for="srcHostPassword" class="sr-only">Host Password</label>
+            <input type="text" class="form-control" placeholder="Host Password" name="srcHostPassword"/><br/>
+        </div>
+
+        <hr/>
+
+        <div class="red-zone">
+            <h4> Destination Details</h4>
+
+            <label for="dstIndexName" class="sr-only">Index Name:</label>
+            <input type="text" class="form-control" placeholder="Index Name" name="dstIndexName"/><br/>
+
+            <label for="dstHostName" class="sr-only">Hostname</label>
+            <input type="text" class="form-control" placeholder="Destination Hostname" name="dstHostName"/><br/>
+
+            <label for="dstHostUserName" class="sr-only">Host Username</label>
+            <input type="text" class="form-control" placeholder="Host Username" name="dstHostUserName"/><br/>
+
+            <label for="dstHostPassword" class="sr-only">Host Password</label>
+            <input type="text" class="form-control" placeholder="Host Password" name="dstHostPassword"/><br/>
+        </div>
+
+        <hr/>
+
+        <div class="red-zone">
+            <h4> Mapping Configuration Override </h4>
+            <label for="dstIndexNumberOfReplicas" class="sr-only">Number of Replicas</label>
+            <input type="text" class="form-control" placeholder="Number of Replicas"
+                   name="dstIndexNumberOfReplicas"/><br/>
+            <label for="dstIndexNumberOfShards" class="sr-only">Number of shards</label>
+            <input type="text" class="form-control" placeholder="Number of Shards" name="dstIndexNumberOfShards"/><br/>
+        </div>
+        <hr/>
+
+        <input type="submit" class="btn btn-lg btn-danger btn-block" value="Execute"/>
+
+    </form>
+</div>
+</body>
+</html>
