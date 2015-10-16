@@ -1,9 +1,9 @@
-# Elastic Cloner App
-
-## Run and Build
+# Elastic Cloner App  [A Spring Boot Application]
 
 
-### To Build and Run the application, execute: If you are using Maven, EXECUTE
+### To Build and Run the application, execute: 
+
+If you are using Maven, EXECUTE
     $ mvn package && java -jar target/cloneProperties-0.0.1-SNAPSHOT.jar
 
 ### Check out the service. 
@@ -27,17 +27,17 @@
   - spring-boot-starter-jdbc
   - Embedded - h2database
 
-## Generated Base:
+### Generated Base from:
     Using https://start.spring.io/
 
-## GETTING STARTED
+### GETTING STARTED WITH SPRING BOOT
+
 Building an Application with Spring Boot: https://spring.io/guides/gs/spring-boot/
 
 
-## Plus
+### Plus
 
-
-## Add production-grade services
+### Added production-grade services
 Added some management services. Spring Boot provides several out of the box with its actuator module,
 such as health, audits, beans, and more.
 
