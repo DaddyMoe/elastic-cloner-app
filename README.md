@@ -36,7 +36,8 @@ Building an Application with Spring Boot: https://spring.io/guides/gs/spring-boo
 
 ## Plus
 
-### Add production-grade services
+
+## Add production-grade services
 Added some management services. Spring Boot provides several out of the box with its actuator module,
 such as health, audits, beans, and more.
 
