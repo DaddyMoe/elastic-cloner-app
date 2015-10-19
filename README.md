@@ -4,11 +4,13 @@
 
 ### To Build and Run the application, execute: 
 
-If you are using Maven, EXECUTE
+If you are using Maven, To Build and Run EXECUTE:
+
     $ mvn package && java -jar target/cloneProperties-0.0.1-SNAPSHOT.jar
 
 ### Check out the service. 
-    $ curl localhost:8080
+    $ curl localhost:8090 
+if has been changed check application log for port and context path if any set...
 
 ### Build Application - Maven
     $ mvn package
